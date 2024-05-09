@@ -1,16 +1,17 @@
-#ifndef player_H
-#define player_H
+#ifndef PLAYER_H
+#define PLAYER_H
 
 #include <iostream>
 #include "AnimatePlayerEntity.h" // Needs to be included to use AnimatePlayerEntity class - developed later
 #include <vector> 
 
-// Player class inherits from AnimatePlayerEntity class
-class Player : public AnimatePlayerEntity {
+// Player class inherits from AnimateEntity class
+class Player : public AnimateEntity {
     public:
     Player(float x, float y, int initialiseHealth, int intialSpeed); 
     virtual ~Player(); 
     void move(int directionX, int directionY); overide; // method to move the player
+    //what is override? why is it next to a semicolon with no return type or function?
 
     // public method to add, store and drop an item to/from the player's inventory
     void pickUpItem(const Item& item); // picks up item
