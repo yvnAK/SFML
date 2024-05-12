@@ -11,7 +11,7 @@ class Player : public AnimateEntity {
     Player(float x, float y, int initialiseHealth, int intialSpeed); 
     virtual ~Player(); 
     void move(int directionX, int directionY); override; // method to move the player
-    //what is override? why is it next to a semicolon with no return type or function?
+    // override is used to override function in the base class, and tells the compiler its not a new function
 
     // public method to add, store and drop an item to/from the player's inventory
     void pickUpItem(const Item& item); // picks up item
